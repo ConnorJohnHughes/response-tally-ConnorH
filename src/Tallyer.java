@@ -54,12 +54,11 @@ public class Tallyer {
         // WAVE 1
         // TODO: Implement this method
         HashMap<String, Integer> map = new HashMap<>();
-        int count = 0;
         for(String topic : topics){
-            if(!map.containsKey(topics)){
-                count = 1;
+            if(!map.containsKey(topic)){
+                map.put(topic, map.get(topic) + 1);
             }else{
-                count += 1;
+                map.put(topic, 1);
             }
             }
             
