@@ -37,7 +37,7 @@ public class Tallyer {
 
         Map<String, Integer> topicCounts = tallyTopics(topics);
         System.out.println("Here are how many times each topic appears (unfiltered):");
-        System.out.println(topicCounts);
+        System.out.println(topicCounts + "\n");
 
         // Wave 2
         Map<String, Integer> topicCountsFiltered = tallyTopicsFiltered(ids, topics);
@@ -85,7 +85,14 @@ public class Tallyer {
     public static Map<String, Integer> tallyTopicsFiltered(List<String> ids, List<String> topics) {
       // WAVE 2
       // TODO: Implement this method
-        
-      return null;
+        Map<String, Integer> map = new HashMap<>();
+        for(String id : ids ){
+            if(map.containsKey(id)){
+                map.put(id, map.get(id) + 1);
+            }else {
+                map.put(id, 1);
+            }
+        }
+      return map;
   }
 }
