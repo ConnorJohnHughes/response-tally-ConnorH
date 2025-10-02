@@ -89,6 +89,7 @@ public class Tallyer {
         for(String id : ids ){
             if(map.containsKey(id)){
                 map.put(id, map.get(id) + 1);
+
             }else {
                 map.put(id, 1);
             }
